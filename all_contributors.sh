@@ -2,7 +2,7 @@
 
 [ -f "$GITHUB_ENV" ] && source $GITHUB_ENV
 
-for i in $(cat ks_repo.txt);
+for i in $(cat repo.txt);
 do
   for j in {1..30};
   do
@@ -10,4 +10,4 @@ do
   done
 done
 
-cat ks_all_contributors_source.txt|grep -Ev "\-bot|\[bot\]|^null$"|sort|uniq > ks_all_contributors_${DATE}.txt
+cat all_contributors_source.txt|grep -Ev "\-bot|\[bot\]|^null$"|sort|uniq > all_contributors_${DATE}.txt
